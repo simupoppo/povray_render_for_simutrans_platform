@@ -1,0 +1,2 @@
+import povray_platform_gui
+povray_platform_gui.make_window()
