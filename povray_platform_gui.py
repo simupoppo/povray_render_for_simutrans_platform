@@ -82,7 +82,7 @@ def make_window():
         elif temp_flag ==3:
             messagebox.showinfo("エラー","画像出力に失敗しました")
     main_win = tk.Tk()
-    main_win.title("simutrans vehicle addon maker with pov-ray")
+    main_win.title("povray render for simutrans platform")
     main_win.geometry("700x200")
     main_frm = ttk.Frame(main_win)
     main_frm.grid(column=0, row=0, sticky=tk.NSEW, padx=10, pady=10)
@@ -92,9 +92,9 @@ def make_window():
     folder_btn = ttk.Button(main_frm, text="選択",command=ask_files)
     template_btn = ttk.Button(main_frm, text=".povファイルを作成",command=ask_template)
     input_pak_label = ttk.Label(main_frm, text="pak size")
-    pak_options=["pak128japan","pak128","pak64","pak192"]
+    pak_options=["pak128","pak64","pak192"]
     input_pak_box = ttk.Combobox(main_frm, values=pak_options, state="normal")
-    input_pak_box.set("pak128japan")
+    input_pak_box.set("pak128")
     makedat_var = tk.BooleanVar()
     makedat_var.set(False)
     makedat_checkbutton = ttk.Checkbutton(main_frm,variable=makedat_var, text="Dat生成")
